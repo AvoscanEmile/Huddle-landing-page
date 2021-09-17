@@ -3,4 +3,245 @@
 :root {
     --clr-pink: #e882e8;
     --clr-violet: #674baf;
+    --ff-h1: 'Poppins', sans-serif;
+    --ff-p: 'Open Sans', sans-serif;
+    --fs-h1: 40px;
+    --fs-p: 18px;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+/* General styling */
+
+html {
+    box-sizing: border-box;
+    background-image: url(images/bg-desktop.svg);
+    background-color: var(--clr-violet);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(300px, 90vw, 1400px);
+}
+
+/* Header styling */
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    height: 55px;
+    margin: 4rem 0;
+}
+
+/* Main styling */
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main__image {
+    width: 54%;
+    height: auto;
+}
+
+.description {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+}
+
+.description__title {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-600);
+    font-family: var(--ff-h1);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.description__text {
+    font-size: var(--fs-p);
+    font-weight: var(--fw-400);
+    font-family: var(--ff-p);
+    margin-top: 0;
+    color: white;
+}
+
+.description__link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: white;
+    width: min-content;
+    color: var(--clr-violet);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-400);
+    font-family: var(--ff-h1);
+    margin-top: 15px;
+    padding: 1em 3.75em;
+    border-radius: 50px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    transition: all 100ms;
+}
+
+.description__link:hover {
+    color: white;
+    background-color: var(--clr-pink);
+    transform: scale(1.1);
+}
+
+.description__link:active {
+    color: white;
+    background-color: var(--clr-pink);
+}
+
+/* Footer styling */
+
+.footer {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attribution__text {
+    color: white;
+    font-size: var(--fs-p);
+    font-weight: var(--fw-400);
+    font-family: var(--ff-p);
+    padding-left: 15px;
+    margin: 7px 0;
+}
+
+.attribution__link:hover {
+    color: var(--clr-pink);
+    text-decoration: none;
+}
+
+.attribution__link:active {
+    color: var(--clr-pink);
+    text-decoration: none;
+}
+
+.social {
+    display: flex;
+}
+
+.social__link {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-size: contain;
+    margin-right: 35px;
+}
+
+.social__link:last-of-type {
+    margin-right: 0;
+}
+
+.social__link:hover {
+    border: 2px solid var(--clr-pink);
+}
+
+.social__link:active {
+    border: 2px solid var(--clr-pink);
+}
+
+.social__link--facebook {
+    background-image: url(images/facebook.svg);
+}
+
+.social__link--facebook:hover {
+    background-image: url(images/facebook--pink.svg);
+}
+
+.social__link--facebook:active {
+    background-image: url(images/facebook--pink.svg);
+}
+
+.social__link--twitter {
+    background-image: url(images/twitter.svg);
+}
+
+.social__link--twitter:hover {
+    background-image: url(images/twitter--pink.svg);
+}
+
+.social__link--twitter:active {
+    background-image: url(images/twitter--pink.svg);
+}
+
+.social__link--instagram {
+    background-image: url(images/instagram.svg);
+}
+
+.social__link--instagram:hover {
+    background-image: url(images/instagram--pink.svg);
+}
+
+.social__link--instagram:active {
+    background-image: url(images/instagram--pink.svg);
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__image {
+        width: 100%;
+    }
+
+    .description {
+        width: 95%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description__link {
+        padding: 1em 5em;
+        transition: none;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .attribution {
+        text-align: center;
+    }
+
+    .social {
+        margin-bottom: 50px;
+    }
 }
