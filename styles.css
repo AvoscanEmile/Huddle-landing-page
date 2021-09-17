@@ -120,27 +120,8 @@ body {
     display: flex;
     margin-top: 40px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-}
-
-.attribution__text {
-    color: white;
-    font-size: var(--fs-p);
-    font-weight: var(--fw-400);
-    font-family: var(--ff-p);
-    padding-left: 15px;
-    margin: 7px 0;
-}
-
-.attribution__link:hover {
-    color: var(--clr-pink);
-    text-decoration: none;
-}
-
-.attribution__link:active {
-    color: var(--clr-pink);
-    text-decoration: none;
 }
 
 .social {
@@ -235,10 +216,6 @@ body {
 
     .footer {
         flex-direction: column-reverse;
-    }
-
-    .attribution {
-        text-align: center;
     }
 
     .social {
